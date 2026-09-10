@@ -1,0 +1,57 @@
+@import "tailwindcss";
+
+:root {
+  --color-ivory: #fbf6f1;
+  --color-blush: #f3e0dc;
+  --color-powder: #dcafaa;
+  --color-rose: #b97c78;
+  --color-rose-deep: #a2645f;
+  --color-sand: #e7ddd0;
+  --color-ink: #3e322f;
+  --color-ink-soft: #6b5c57;
+  --color-line: #e4d5cd;
+}
+
+@theme inline {
+  --color-ivory: var(--color-ivory);
+  --color-blush: var(--color-blush);
+  --color-powder: var(--color-powder);
+  --color-rose: var(--color-rose);
+  --color-rose-deep: var(--color-rose-deep);
+  --color-sand: var(--color-sand);
+  --color-ink: var(--color-ink);
+  --color-ink-soft: var(--color-ink-soft);
+  --color-line: var(--color-line);
+
+  --font-serif: var(--font-cormorant), serif;
+  --font-sans: var(--font-jost), sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+body {
+  background: var(--color-ivory);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  font-weight: 350;
+  line-height: 1.6;
+}
+
+/* Las etiquetas y botones con tracking amplio necesitan algo más de peso
+   para no perderse a tamaños pequeños. */
+.tracking-wide {
+  font-weight: 500;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
